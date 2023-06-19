@@ -19,13 +19,16 @@ public class GroundFall : MonoBehaviour
 
         if (shouldFall)
         {
+
+            //Set current position
             Vector2 pos = transform.position;
+            //Calculate how much to fall
             float fallAmount = fallSpeed * Time.deltaTime;
+            //Set new position
             pos.y -= fallAmount;
 
 
-
-
+            //If player exists, move the player position based on the ground position's y axis
             if (player != null)
             {
                 player.groundHeight -= fallAmount;
@@ -36,6 +39,7 @@ public class GroundFall : MonoBehaviour
 
             transform.position = pos;
 
+            //Move object position based on ground position on the y axis
             foreach (Obstacle obj in obstacles)
             {
 
