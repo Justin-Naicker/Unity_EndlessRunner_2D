@@ -24,10 +24,6 @@ public class GroundFall : MonoBehaviour
             pos.y -= fallAmount;
 
 
-            if (gameObject != null)
-            {
-            }
-
 
 
             if (player != null)
